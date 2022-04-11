@@ -1,4 +1,4 @@
-export const COLORS: { colors: Colors } = {
+export const COLORS = {
   colors: {
     gray: {
       "50": "#F8F9FA",
@@ -63,23 +63,26 @@ export const COLORS: { colors: Colors } = {
   },
 };
 
-interface Colors {
-  gray: ColorValueType;
-  red: ColorValueType;
-  orange: ColorValueType;
-  blue: ColorValueType;
-  green: ColorValueType;
-}
-
-export interface ColorValueType {
-  50: string;
-  100: string;
-  200: string;
-  300: string;
-  400: string;
-  500: string;
-  600: string;
-  700: string;
-  800: string;
-  900: string;
-}
+export const ThemeColors = {
+  semanticTokens: {
+    colors: {
+      error: "red.500",
+      bg0: {
+        default: "gray.50",
+        _dark: "gray.800",
+      },
+      bg1: {
+        default: "gray.100",
+        _dark: "gray.900",
+      },
+      bg2: {
+        default: "gray.50",
+        _dark: "gray.700",
+      },
+      text1: {
+        default: "white",
+        _dark: "black",
+      },
+    },
+  },
+};
