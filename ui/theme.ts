@@ -2,6 +2,7 @@ import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 import { COLORS } from "./colors";
 import { mode } from "@chakra-ui/theme-tools";
 import { ThemeColors } from "./themeColors";
+import { textStyles } from "./components/text";
 const colors = COLORS.colors;
 const semanticTokens = ThemeColors.semanticTokens;
 export const theme = extendTheme({
@@ -21,5 +22,8 @@ export const theme = extendTheme({
         lineHeight: "base",
       },
     }),
+  },
+  components: {
+    Text: textStyles,
   },
 });

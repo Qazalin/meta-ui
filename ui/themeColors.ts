@@ -83,6 +83,10 @@ export const ThemeColors = {
         default: "white",
         _dark: "black",
       },
+      primary: {
+        default: "blue.300",
+        _dark: "blue.600",
+      },
     },
   },
 };

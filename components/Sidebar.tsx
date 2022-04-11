@@ -9,16 +9,11 @@ import {
   LinkBox,
   LinkOverlay,
 } from "@chakra-ui/layout";
-import {
-  MdHome,
-  MdSearch,
-  MdLibraryMusic,
-  MdPlaylistAdd,
-  MdFavorite,
-} from "react-icons/md";
+import { AiOutlineSetting } from "react-icons/ai";
 import { FaCoins } from "react-icons/fa";
 import { BiNetworkChart } from "react-icons/bi";
 import { FiBarChart2 } from "react-icons/fi";
+import { Network } from "./Network";
 
 const navMenu = [
   {
@@ -35,6 +30,11 @@ const navMenu = [
     name: "Your Feed",
     icon: FiBarChart2,
     route: "/feed",
+  },
+  {
+    name: "Settings",
+    icon: AiOutlineSetting,
+    route: "/settings",
   },
 ];
 
@@ -72,7 +72,7 @@ export const Sidebar = () => {
         </Box>
         <Divider color="text1" mt="20px" />
         <Box height="66%" overflowY="auto" paddingY="20px">
-          <List spacing={2}>
+          {/*          <List spacing={2}>
             {playlists.map((playlist, idx) => (
               <ListItem paddingX="20px" key={`${playlist}--${idx}`}>
                 <LinkBox>
@@ -82,7 +82,8 @@ export const Sidebar = () => {
                 </LinkBox>
               </ListItem>
             ))}
-          </List>
+          </List> */}
+          <Network />
         </Box>
       </Box>
     </Box>
