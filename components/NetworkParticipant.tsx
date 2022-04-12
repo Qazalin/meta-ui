@@ -1,4 +1,4 @@
-import { Avatar, Text, Box, Flex } from "@chakra-ui/react";
+import { Avatar, Text, Box, Flex, Circle } from "@chakra-ui/react";
 
 export const NetworkParticipant = () => {
   return (
@@ -10,6 +10,9 @@ export const NetworkParticipant = () => {
       <Text mt="10px" variant="h2">
         shawn.eth
       </Text>
+      <Circle bg="secondary" size="15px" mt="17px" ml="35px" fontSize="0.6rem">
+        1
+      </Circle>
     </Flex>
   );
 };

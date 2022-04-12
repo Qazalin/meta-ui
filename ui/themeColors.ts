@@ -80,12 +80,20 @@ export const ThemeColors = {
         _dark: "gray.700",
       },
       text1: {
-        default: "white",
-        _dark: "black",
+        default: "black",
+        _dark: "white",
+      },
+      text2: {
+        default: "gray.500",
+        _dark: "gray.200",
       },
       primary: {
         default: "blue.300",
         _dark: "blue.600",
+      },
+      secondary: {
+        default: "green.300",
+        _dark: "green.600",
       },
     },
   },

@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       <Box marginLeft="250px">
         <Box>meta</Box>
       </Box>
-      <Box position="absolute" top="0" width="250px" left="0">
+      <Box position="absolute" top="0" width="300px" left="0">
         <Sidebar />
       </Box>
     </Box>
