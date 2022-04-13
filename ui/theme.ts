@@ -11,14 +11,16 @@ export const theme = extendTheme({
   styles: {
     global: (props: any) => ({
       body: {
+          overflow: "hidden",
         fontFamily: "body",
         // animation for change color mode
-        transition: "background 2s",
+        // transition: "background 2s",
+        transition: "none",
 
         // ( light - dark )
         color: mode("gray.800", "whiteAlpha.900")(props),
         // bg: mode("gray.100", "gray.800")(props),
-        bg: "bg0",
+        bg: "bg1",
         lineHeight: "base",
       },
     }),
