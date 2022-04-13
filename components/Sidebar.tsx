@@ -1,13 +1,11 @@
 import { Box, Divider } from "@chakra-ui/layout";
 import { SidebarMenu } from "./SidebarMenu";
 import { Network } from "@meta/components";
-import { useWindowDimensions } from "@meta/hooks";
-import { BREAKPOINTS } from "@meta/ui";
+import {useAdaptivityContext} from "@meta/hooks";
 const playlists = new Array(30).fill(1).map((_, i) => `Playlist ${i + 1}`);
 
 export const Sidebar = () => {
-  const isSmallScreen = useWindowDimensions(BREAKPOINTS.md);
-  if (isSmallScreen !== null) {
+const isSmallScreen = useAdaptivityContext()
     return (
       <Box
         width="100%"
@@ -39,7 +37,4 @@ export const Sidebar = () => {
         </Box>
       </Box>
     );
-  }
-  return;
-  null;
 };
