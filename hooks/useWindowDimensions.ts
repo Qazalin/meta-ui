@@ -10,7 +10,7 @@ type WindowDimentions = {
   height: number | undefined;
 };
 
-const useWindowDimensions = (): WindowDimentions => {
+export const useWindowDimensions = (threshold: number): boolean | null => {
   const [windowDimensions, setWindowDimensions] = useState<WindowDimentions>({
     width: undefined,
     height: undefined,
@@ -27,7 +27,9 @@ const useWindowDimensions = (): WindowDimentions => {
     return (): void => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount
 
-  return windowDimensions;
+  if (windowDimensions.width) {
+    const isMeetingRequirement: boolean = windowDimensions.width <= threshold;
+    return isMeetingRequirement;
+  }
+  return null;
 };
-
-export default useWindowDimensions;

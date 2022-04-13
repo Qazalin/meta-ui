@@ -1,8 +1,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import { Sidebar } from "@meta/components";
+import { useWindowDimensions } from "@meta/hooks";
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 
 const Home: NextPage = () => {
   return (

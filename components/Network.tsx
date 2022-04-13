@@ -1,8 +1,9 @@
 import { Box, Button, Text } from "@chakra-ui/react";
+import { DependantProps } from "@meta/utils";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { NetworkParticipant } from "./NetworkParticipant";
 
-export const Network = () => {
+export const Network = ({ isSmallScreen }: DependantProps) => {
   return (
     <Box mx="20px">
       <Text
