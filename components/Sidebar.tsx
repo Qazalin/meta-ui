@@ -1,30 +1,24 @@
 import { Box, Divider } from "@chakra-ui/layout";
 import { SidebarMenu } from "./SidebarMenu";
 import { Network } from "@meta/components";
-import {useAdaptivityContext} from "@meta/hooks";
-import {Logo} from "./Logo";
+import { useAdaptivityContext } from "@meta/hooks";
+import { Logo } from "./Logo";
 const playlists = new Array(30).fill(1).map((_, i) => `Playlist ${i + 1}`);
 
 export const Sidebar = () => {
-const isSmallScreen = useAdaptivityContext()
-    return (
-      <Box
-        width="100%"
-        height="100%"
-        bg="bg1"
-        paddingX="5px"
-        fontSize="1.3rem"
-      >
-          <Box mb='20px'>
-              <Logo />
-          </Box>
-        <Box py="20px" height="100%">
-          <Box marginBottom="20px">
-            <SidebarMenu isSmallScreen={isSmallScreen} />
-          </Box>
-          <Divider color="text1" mt="20px" />
-          <Box height="66%" overflowY="auto" paddingY="20px">
-            {/*          <List spacing={2}>
+  const isSmallScreen = useAdaptivityContext();
+  return (
+    <Box width="100%" height="100%" bg="bg1" paddingX="5px" fontSize="1.3rem">
+      <Box mb="20px">
+        <Logo />
+      </Box>
+      <Box py="20px" height="100%">
+        <Box marginBottom="20px">
+          <SidebarMenu isSmallScreen={isSmallScreen} />
+        </Box>
+        <Divider color="text1" mt="20px" />
+        <Box height="66%" overflowY="auto" paddingY="20px">
+          {/*          <List spacing={2}>
             {playlists.map((playlist, idx) => (
               <ListItem paddingX="20px" key={`${playlist}--${idx}`}>
                 <LinkBox>
@@ -35,9 +29,9 @@ const isSmallScreen = useAdaptivityContext()
               </ListItem>
             ))}
           </List> */}
-            <Network />
-          </Box>
+          <Network />
         </Box>
       </Box>
-    );
+    </Box>
+  );
 };

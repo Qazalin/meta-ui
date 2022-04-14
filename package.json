@@ -15,11 +15,13 @@
     "@emotion/styled": "^11",
     "@fontsource/lato": "^4.5.5",
     "@fontsource/raleway": "^4.5.5",
+    "@imtbl/imx-sdk": "^1.15.0",
     "framer-motion": "^6",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "recharts": "^2.1.9"
   },
   "devDependencies": {
     "@types/node": "17.0.23",
@@ -28,5 +30,8 @@
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.4",
     "typescript": "4.6.3"
+  },
+  "volta": {
+    "node": "14.19.1"
   }
 }

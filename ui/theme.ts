@@ -3,15 +3,17 @@ import { COLORS } from "./colors";
 import { mode } from "@chakra-ui/theme-tools";
 import { ThemeColors } from "./themeColors";
 import { textStyles } from "./components/text";
+
 const colors = COLORS.colors;
 const semanticTokens = ThemeColors.semanticTokens;
+
 export const theme = extendTheme({
   colors,
   semanticTokens,
   styles: {
     global: (props: any) => ({
       body: {
-          overflow: "hidden",
+        overflow: "hidden",
         fontFamily: "body",
         // animation for change color mode
         // transition: "background 2s",

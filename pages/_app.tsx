@@ -8,12 +8,12 @@ import AdaptivityProvider from "@meta/providers/AdaptivityProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-        <AdaptivityProvider>
-            <MainLayout>
-                <Component {...pageProps} />
-            </MainLayout>
-        </AdaptivityProvider>
+    <ChakraProvider resetCSS theme={theme}>
+      <AdaptivityProvider>
+        <MainLayout>
+          <Component {...pageProps} />
+        </MainLayout>
+      </AdaptivityProvider>
     </ChakraProvider>
   );
 }
