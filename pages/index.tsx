@@ -1,11 +1,9 @@
-import { Box, Text } from "@chakra-ui/react";
-import { Sidebar } from "@meta/components";
+import { Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
-import { useAdaptivityContext } from "@meta/hooks";
 import { OnboardingPage } from "@meta/components";
+import {walletLink} from "@meta/lib";
 
 const Home: NextPage = () => {
-  const isSmallScreen = useAdaptivityContext();
   return (
     <Box w="100%" h="100%" overflow="hidden">
       <Box marginLeft="250px">
