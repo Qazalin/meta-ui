@@ -1,10 +1,10 @@
 import { Box, Button } from "@chakra-ui/react";
-import {walletLink} from "@meta/lib";
+import {linkControlFlow} from "@meta/lib";
 
 export const OnboardingPage = () => {
   return (
     <Box>
-        <Button onClick={async() => await walletLink()}>Start Exploring</Button>
+        <Button onClick={async() => await linkControlFlow()}>Start Exploring</Button>
     </Box>
   );
 };
