@@ -1,5 +1,6 @@
 import { ImmutableXClient, Link } from "@imtbl/imx-sdk";
 
+const NETWORK: string = process.env.NETWORK;
 export async function WalletLink() {
   const linkAddress = "https://link.x.immutable.com";
   const apiAddress = "https://api.x.immutable.com/v1";
