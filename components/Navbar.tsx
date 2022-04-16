@@ -22,7 +22,7 @@ export const Navbar = () => {
       <Logo />
       <DarkModeSwitch />
       <Center
-        ml="250px"
+        ml="10%"
         display={isSmallScreen ? "none" : "flex"}
         textTransform="capitalize"
       >
