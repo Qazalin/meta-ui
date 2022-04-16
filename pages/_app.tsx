@@ -1,18 +1,28 @@
+import type { ReactElement, ReactNode } from "react";
 import type { AppProps } from "next/app";
+import type { NextPage } from "next";
 import "@fontsource/lato";
 import "@fontsource/raleway";
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "@meta/ui";
-import { MainLayout } from "@meta/layout/MainLayout";
 import AdaptivityProvider from "@meta/providers/AdaptivityProvider";
 
-function MyApp({ Component, pageProps }: AppProps) {
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout ?? ((page) => page);
+
   return (
     <ChakraProvider resetCSS theme={theme}>
       <AdaptivityProvider>
-        <MainLayout>
-          <Component {...pageProps} />
-        </MainLayout>
+        {getLayout(<Component {...pageProps} />)}
       </AdaptivityProvider>
     </ChakraProvider>
   );
