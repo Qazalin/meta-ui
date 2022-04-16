@@ -19,14 +19,7 @@ export const AppLayout: React.FC<LayoutProps> = ({ children }) => {
       >
         {children}
       </Box>
-      <Box
-        bg="red"
-        position="absolute"
-        top="0"
-        width={Sidebarwidth}
-        left="0"
-        h="100%"
-      >
+      <Box position="absolute" top="0" width={Sidebarwidth} left="0" h="100%">
         <Sidebar />
       </Box>
     </SharedLayout>

@@ -2,17 +2,12 @@ import { Box, Divider } from "@chakra-ui/layout";
 import { SidebarMenu } from "./SidebarMenu";
 import { Network } from "@meta/components";
 import { useAdaptivityContext } from "@meta/hooks";
-import { Logo } from "./Logo";
-const playlists = new Array(30).fill(1).map((_, i) => `Playlist ${i + 1}`);
 
 export const Sidebar = () => {
   const isSmallScreen = useAdaptivityContext();
   return (
-    <Box width="100%" height="100%" bg="bg1" paddingX="5px" fontSize="1.3rem">
-      <Box mb="20px">
-        <Logo />
-      </Box>
-      <Box py="20px" height="100%">
+    <Box width="100%" height="100%" paddingX="5px" fontSize="1.3rem">
+      <Box mt="100px" py="20px" height="100%">
         <Box marginBottom="20px">
           <SidebarMenu isSmallScreen={isSmallScreen} />
         </Box>

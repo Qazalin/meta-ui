@@ -6,9 +6,7 @@ import { ReactElement } from "react";
 const App = () => {
   return (
     <Box w="100%" h="100%" overflow="hidden">
-      <Box marginLeft="250px">
-        <OnboardingPage />
-      </Box>
+      <Box marginLeft="250px"></Box>
     </Box>
   );
 };
