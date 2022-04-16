@@ -1,18 +1,17 @@
 import { Box, Text } from "@chakra-ui/react";
-import { Sidebar } from "@meta/components";
-import type { NextPage } from "next";
-import { useAdaptivityContext } from "@meta/hooks";
-import { OnboardingPage } from "@meta/components";
+import { ReactElement } from "react";
+import { LandingLayout } from "@meta/layout";
 
-const Home: NextPage = () => {
-  const isSmallScreen = useAdaptivityContext();
+const Landing = () => {
   return (
     <Box w="100%" h="100%" overflow="hidden">
-      <Box marginLeft="250px">
-        <OnboardingPage />
-      </Box>
+      Landing page
     </Box>
   );
 };
 
-export default Home;
+export default Landing;
+
+Landing.getLayout = function getLayout(content: ReactElement) {
+  return <LandingLayout>content</LandingLayout>;
+};
