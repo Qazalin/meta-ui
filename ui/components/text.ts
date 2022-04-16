@@ -13,6 +13,11 @@ export const textStyles: ComponentStyleConfig = {
   },
   // styles for different visual variants ("outline", "solid")
   variants: {
+    heading: {
+      fontSize: ["3rem", "5rem", "7rem", "9rem"],
+      fontFamily: "heading",
+      textTransform: "capitalize",
+    },
     h1: {
       fontSize: "2rem",
       fontWeight: "bold",

@@ -20,6 +20,7 @@ export const theme = extendTheme({
       body: {
         overflow: "hidden",
         fontFamily: "body",
+        mx: "20px",
         // animation for change color mode
         // transition: "background 2s",
         transition: "none",
