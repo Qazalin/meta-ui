@@ -13,5 +13,5 @@ const Landing = () => {
 export default Landing;
 
 Landing.getLayout = function getLayout(content: ReactElement) {
-  return <LandingLayout>content</LandingLayout>;
+  return <LandingLayout>{content}</LandingLayout>;
 };
